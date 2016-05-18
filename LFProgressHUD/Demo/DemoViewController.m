@@ -29,12 +29,6 @@ NSString * const kDemoTableViewCell = @"kDemoTableViewCell";
     [self.view addSubview:self.demoTableView];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-}
-
 #pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
