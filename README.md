@@ -4,6 +4,8 @@
 
 `LFProgressHUD` is an iOS class that displays a full screen HUD with custom indicator and/or labels. `LFProgressHUD` can also display dynamic progress in any thread.
 
+[![Introduction](https://github.com/cctv1237/LFProgressHUD/blob/master/LFProgressHUD.gif)](https://github.com/cctv1237/LFProgressHUD/blob/master/LFProgressHUD.gif)
+
 ## Requirements
 
 `LFProgressHUD` works on iOS 8.0+ and requires ARC to build. It depends on the following Apple frameworks, which should already be included with most Xcode templates:
