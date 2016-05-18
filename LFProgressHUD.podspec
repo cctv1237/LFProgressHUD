@@ -16,11 +16,11 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LFProgressHUD"
-  s.version      = "1.0.0"
+  s.version      = "0.1.0"
   s.summary      = "A iOS8 + light HUD with progress"
 
   s.description  = <<-DESC
-                   A iOS8+ PhotoKit Multiple Image Picker.
+                   A iOS8 + light HUD with progress.
                    DESC
 
   s.homepage     = "http://longfan.me"

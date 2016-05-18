@@ -18,7 +18,7 @@ You will need the latest developer tools in order to build `LFProgressHUD`. Old 
 
 [CocoaPods](http://cocoapods.org) is the recommended way to add LFProgressHUD to your project.
 
-1. Add a pod entry for LFProgressHUD to your Podfile `pod 'LFProgressHUD', '~> 0.9.2'`
+1. Add a pod entry for LFProgressHUD to your Podfile `pod 'LFProgressHUD', '~> 0.1.0'`
 2. Install the pod(s) by running `pod install`.
 3. Include LFProgressHUD wherever you need it with `#import "LFProgressHUD.h"`.
 
