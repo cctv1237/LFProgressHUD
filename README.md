@@ -35,9 +35,9 @@ Alternatively you can directly add the `LFProgressHUD.h` and `LFProgressHUD.m` s
 
 ## Usage
 
-LFProgressHUD can help you dealing with program which is running time-consuming operation such as API call back and disk writing. LFProgressHUD public methods are running in the main thead so that you can use it in some asynchronous tasks.
+LFProgressHUD can help you dealing with program which is running time-consuming operation such as API call back and disk writing. Public methods of LFProgressHUD  are running in the main thead so that you can use it in some asynchronous tasks.
 
-# Use as Notice
+### Use as Notice
 
 You can simply add an custom-appear-time notice. 
 
@@ -51,7 +51,7 @@ Or custom your own notice image.
 [LFProgressHUD showHUDWithImage:[UIImage imageNamed:@"yao_ming"] duration:0.8 contentString:@"U ask me?"];
 ```
 
-# Use as Progress
+### Use as Progress
 
 You can add an Progress with 2 types, infinity roll animation and roll with live progress. 
 
@@ -72,7 +72,9 @@ And to dissmiss
 [LFProgressHUD dissmiss];
 ```
 
-See more in demo.
+See more in demo and welcome to post issues.
+
+Enjoy.
 
 ## License
 
