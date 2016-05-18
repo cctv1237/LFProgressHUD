@@ -95,30 +95,40 @@ static CGFloat const kLFProgressHUDMaxTextWidth = 210.0;
 
 + (void)showHUDWithType:(LFProgressHUDType)HUDType duration:(NSTimeInterval)duration contentString:(NSString *)string
 {
-    [[self sharedInstance] addBaseViewToWindow];
-    [[self sharedInstance] showHUDWithType:HUDType duration:duration contentString:string];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[self sharedInstance] addBaseViewToWindow];
+        [[self sharedInstance] showHUDWithType:HUDType duration:duration contentString:string];
+    });
 }
 
 + (void)showHUDWithImage:(UIImage *)image duration:(NSTimeInterval)duration contentString:(NSString *)string
 {
-    [[self sharedInstance] addBaseViewToWindow];
-    [[self sharedInstance] showHUDWithImage:image duration:duration contentString:string];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[self sharedInstance] addBaseViewToWindow];
+        [[self sharedInstance] showHUDWithImage:image duration:duration contentString:string];
+    });
 }
 
 + (void)showProgressWithType:(LFProgressType)progressType
 {
-    [[self sharedInstance] addBaseViewToWindow];
-    [[self sharedInstance] showProgressWithType:progressType];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[self sharedInstance] addBaseViewToWindow];
+        [[self sharedInstance] showProgressWithType:progressType];
+    });
 }
 
 + (void)updateProgress:(CGFloat)progress
 {
-    [[self sharedInstance] updateProgress:progress];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[self sharedInstance] updateProgress:progress];
+    });
 }
 
 + (void)dissmiss
 {
-    [[self sharedInstance] dissmiss];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[self sharedInstance] dissmiss];
+    });
 }
 
 #pragma mark - Instance methods
