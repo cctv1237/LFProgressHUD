@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LFProgressHUD"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "A iOS8 + light HUD with progress"
 
   s.description  = <<-DESC

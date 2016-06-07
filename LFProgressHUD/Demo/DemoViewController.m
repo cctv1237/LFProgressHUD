@@ -97,7 +97,7 @@ NSString * const kDemoTableViewCell = @"kDemoTableViewCell";
 
 - (void)demoShowInfinityRollFor3s
 {
-    [LFProgressHUD showProgressWithType:LFProgressTypeRollInfinity];
+    [LFProgressHUD showProgressWithType:LFProgressTypeRollInfinity progressImage:nil];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [LFProgressHUD dissmiss];
     });
@@ -105,7 +105,7 @@ NSString * const kDemoTableViewCell = @"kDemoTableViewCell";
 
 - (void)demoShowProgressRoll
 {
-    [LFProgressHUD showProgressWithType:LFProgressTypeRollProgress];
+    [LFProgressHUD showProgressWithType:LFProgressTypeRollProgress progressImage:nil];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [LFProgressHUD updateProgress:0.3];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -125,7 +125,7 @@ NSString * const kDemoTableViewCell = @"kDemoTableViewCell";
 
 - (void)demoShowInfinityRollThenDone
 {
-    [LFProgressHUD showProgressWithType:LFProgressTypeRollInfinity];
+    [LFProgressHUD showProgressWithType:LFProgressTypeRollInfinity progressImage:nil];
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [LFProgressHUD showHUDWithType:LFProgressHUDTypeDone duration:0.8 contentString:@"Done"];
     });

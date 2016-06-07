@@ -109,11 +109,11 @@ static CGFloat const kLFProgressHUDMaxTextWidth = 210.0;
     });
 }
 
-+ (void)showProgressWithType:(LFProgressType)progressType
++ (void)showProgressWithType:(LFProgressType)progressType progressImage:(UIImage *)image
 {
     dispatch_async(dispatch_get_main_queue(), ^{
         [[self sharedInstance] addBaseViewToWindow];
-        [[self sharedInstance] showProgressWithType:progressType];
+        [[self sharedInstance] showProgressWithType:progressType progressImage:image];
     });
 }
 
@@ -182,9 +182,14 @@ static CGFloat const kLFProgressHUDMaxTextWidth = 210.0;
     }];
 }
 
-- (void)showProgressWithType:(LFProgressType)progressType
+- (void)showProgressWithType:(LFProgressType)progressType progressImage:(UIImage *)image
 {
-    self.progressLogoView.image = [self imageWithProgressType:progressType];
+    if (image) {
+        self.progressLogoView.image = image;
+    } else {
+        self.progressLogoView.image = [self imageWithProgressType:progressType];
+    }
+    
     [self addSubview:self.progressLogoView];
     
     if (progressType == LFProgressTypeRollProgress) {

@@ -1,6 +1,6 @@
 # LFProgressHUD
 
-[![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-0.1.0-green.svg?style=flat)](https://cocoapods.org) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://opensource.org/licenses/MIT)
+[![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-0.1.1-green.svg?style=flat)](https://cocoapods.org) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://opensource.org/licenses/MIT)
 
 `LFProgressHUD` is an iOS class that displays a full screen HUD with custom indicator and/or labels. `LFProgressHUD` can also display dynamic progress in any thread.
 
@@ -23,7 +23,7 @@ You will need the latest developer tools in order to build `LFProgressHUD`. Old 
 
 [CocoaPods](http://cocoapods.org) is the recommended way to add LFProgressHUD to your project.
 
-1. Add a pod entry for LFProgressHUD to your Podfile `pod 'LFProgressHUD', '~> 0.1.0'`
+1. Add a pod entry for LFProgressHUD to your Podfile `pod 'LFProgressHUD', '~> 0.1.1'`
 2. Install the pod(s) by running `pod install`.
 3. Include LFProgressHUD wherever you need it with `#import <LFProgressHUD/LFProgressHUD.h>`.
 
@@ -36,6 +36,9 @@ Alternatively you can directly add the `LFProgressHUD.h` and `LFProgressHUD.m` s
 3. Include LFProgressHUD wherever you need it with `#import "LFProgressHUD.h"`.
 
 ## Usage
+
+#### New in 0.1.1
+Custom Progress Image.
 
 LFProgressHUD can help you dealing with program which is running time-consuming operation such as API call back and disk writing. Public methods of LFProgressHUD  are running in the main thead so that you can use it in some asynchronous tasks.
 
@@ -58,8 +61,8 @@ Or custom your own notice image.
 You can add an Progress with 2 types, infinity roll animation and roll with live progress. 
 
 ```objective-c
-[LFProgressHUD showProgressWithType:LFProgressTypeRollInfinity];
-[LFProgressHUD showProgressWithType:LFProgressTypeRollProgress];
+[LFProgressHUD showProgressWithType:LFProgressTypeRollInfinity progressImage:nil];
+[LFProgressHUD showProgressWithType:LFProgressTypeRollProgress progressImage:nil];
 ```
 
 If you are using LFProgressTypeRollProgress, you can update progress as follow

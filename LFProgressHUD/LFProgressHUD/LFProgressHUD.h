@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, LFProgressType) {
 + (void)showHUDWithType:(LFProgressHUDType)HUDType duration:(NSTimeInterval)duration contentString:(NSString *)string;
 + (void)showHUDWithImage:(UIImage *)image duration:(NSTimeInterval)duration contentString:(NSString *)string;
 
-+ (void)showProgressWithType:(LFProgressType)progressType;
++ (void)showProgressWithType:(LFProgressType)progressType progressImage:(UIImage *)image;
 + (void)updateProgress:(CGFloat)progress;
 
 + (void)dissmiss;
